@@ -1,0 +1,12 @@
+def split_fileA(line):
+    # split the input line in word and count on the comma
+    line       = line.strip()       #strip out carriage return
+    key_value  = line.split('\t')   #split line, into key and value, returns a list
+    word_in  = key_value[0]       #key is first item in list, indexed by 0
+    count_in   = key_value[1]
+    # turn the count to an integer
+    count_in = int(count_in)
+    return (word_in, count_in)
+
+
+

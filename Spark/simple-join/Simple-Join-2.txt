@@ -1,0 +1,11 @@
+def split_fileB(line):
+    # split the input line into word, date and count_string
+    line            = line.strip()      #strip out carriage return
+    key_value       = line.split(",")   #split line, into key and value, returns a list
+    key_in          = key_value[0].split(" ")   #key is first item in list
+    count_string    = key_value[1]   #value is 2nd item
+    #print key_in
+    if len(key_in)>=2:#if this entry has <date word> in key
+        date = key_in[0]      #now get date from key field
+        word = key_in[1]
+    return (word, date + " " + count_string)
