@@ -1,2 +1,5 @@
 hdfs dfs -copyFromLocal  Twitter_Test_Samp200.txt /user/cloudera/pigin
 pig wordcount.pig
+
+checkout data from HDFS :
+hdfs dfs -getmerge /user/cloudera/pigoutnew/* total_viewer_counts_twitter.txt
