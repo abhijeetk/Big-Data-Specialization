@@ -1,0 +1,2 @@
+hdfs dfs -copyFromLocal  Twitter_Test_Samp200.txt /user/cloudera/pigin
+pig wordcount.pig
