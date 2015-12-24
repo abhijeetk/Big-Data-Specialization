@@ -1,0 +1,16 @@
+> head -1 /usr/lib/hue/apps/search/examples/collections/solr_configs_yelp_demo/index_data.csv
+
+> cp /usr/lib/hue/apps/search/examples/collections/solr_configs_yelp_demo/index_data.csv .
+
+> hdfs dfs -mkdir /user/cloudera/input_yelp
+
+> hdfs dfs -mkdir /user/cloudera/output_yelp
+
+> hdfs dfs -copyFromLocal index_data.csv /user/cloudera/input_yelp/yelp_data.csv
+
+> hdfs dfs -ls /user/cloudera/input_yelp
+
+> pig Pig_script_4yelpdata.pig
+
+>  hdfs dfs -get /user/cloudera/output_yelp/* .
+
